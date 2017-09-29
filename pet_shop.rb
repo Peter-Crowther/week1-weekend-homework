@@ -12,3 +12,4 @@ end
 
 def add_or_remove_cash(pet_shop, amount)
   pet_shop [:admin][:total_cash] -= amount
+end
