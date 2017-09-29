@@ -26,6 +26,7 @@ def stock_count(stock)
   return stock[:pets].count
 end
 
+#9 & 10
 def pets_by_breed(pet_shop, breed)
       pets_array = []
       for pet in pet_shop[:pets]
@@ -34,4 +35,12 @@ def pets_by_breed(pet_shop, breed)
         end
       end
         return pets_array
+end
+
+def find_pet_by_name(pet_shop, name)
+  for pet in pet_shop[:pets]
+    if pet[:name] == name
+      return pet
+    end
+  end
 end
