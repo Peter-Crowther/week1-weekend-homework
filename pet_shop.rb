@@ -51,7 +51,6 @@ def find_pet_by_name(pet_shop, name)
       return pet
     end
   end
-  else
     return nil
 end
 
@@ -61,7 +60,6 @@ def remove_pet_by_name(pet_shop, name)
       pet_shop[:pets].delete(pet)
     end
   end
-  else
     return nil
 end
 
@@ -72,4 +70,8 @@ end
 
 def customer_pet_count(customers)
   return customers[:pets].count
+end
+
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets].push(new_pet)
 end
