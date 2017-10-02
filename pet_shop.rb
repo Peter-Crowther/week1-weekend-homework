@@ -22,8 +22,8 @@ def increase_pets_sold(pet_shop, amount_sold)
   pet_shop[:admin][:pets_sold] += amount_sold
 end
 
-def stock_count(stock)
-  return stock[:pets].count
+def stock_count(pet_shop)
+  return pet_shop[:pets].count()
 end
 
 #9 & 10
@@ -72,8 +72,8 @@ def customer_pet_count(customers)
   return customers[:pets].count()
 end
 
-def add_pet_to_customer(customer, new_pet)
-  customer[:pets].push(new_pet)
+def add_pet_to_customer(customer, pet)
+  customer[:pets].push(pet)
 end
 
 #question 16 and 17
@@ -82,4 +82,13 @@ def customer_can_afford_pet(customer, new_pet)
       return true
     end
   false
+end
+
+def sell_pet_to_customer(customers, pet_shop, pet)
+  find_pet_by_name(pet_shop)
+  add_pet_to_customer(customers, pet)
+  customer_pet_count()
+  stock_count()
+
+
 end
