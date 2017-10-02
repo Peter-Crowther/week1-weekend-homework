@@ -84,11 +84,11 @@ def customer_can_afford_pet(customer, new_pet)
   false
 end
 
-def sell_pet_to_customer(customers, pet_shop, pet)
-  find_pet_by_name(pet_shop)
-  add_pet_to_customer(customers, pet)
-  customer_pet_count()
-  stock_count()
-
-
+def sell_pet_to_customer(pet_shop, pet, customer)
+puts pet
+  find_pet_by_name(pet_shop, pet)
+  add_pet_to_customer(customer, pet)
+  customer_pet_count(customer)
+  increase_pets_sold(pet_shop, 1)
+  add_or_remove_cash(pet_shop, pet[:price])
 end
